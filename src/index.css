@@ -1,13 +1,199 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+:root {
+  --text-color: #fff;
+  --bg-color: #212a43;
+  --second-bg-color: #313b56;
+  --main-color: #9ed7ed;
+  --second-color: #acaeb1;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+  text-decoration: none;
+  list-style: none;
+  scroll-behavior: smooth;
+}
+
+.flex-container {
+  display: flex;
+  align-items: center;
+}
+
+.app {
+  display: flex;
+}
+
+.sideBar {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+
+  background-color: #212121;
+  height: 100vh;
+  width: 15vw;
+  color: white;
+}
+
+.sideBar section {
+  padding: 0.5rem;
+  width: 100%;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 10vh;
+  max-height: 10vh;
+}
+
+.profile img {
+  border-radius: 50%;
+  object-fit: cover;
+  width: 70px;
+  height: 70px;
+}
+
+.profile h2 {
+  font-size: small;
+  margin: 0;
+}
+
+.profile h3 {
+  font-size: small;
+  opacity: 0.9;
+  margin: 0;
+}
+
+.searchBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.3rem 0.5rem 0.3rem 0.5rem;
+  font-size: large;
+  background-color: transparent;
+  border: 1px white solid;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.searchBar input {
+  border: none;
+  outline: none;
+  width: 90%;
+  color: white;
+  background-color: transparent;
+}
+
+.sideBar_sheet {
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.flex-container h4 {
+  font-weight: 300;
+  font-size: small;
+}
+
+.sideBar_sheet i {
+  margin-right: 0.5rem;
+}
+
+.sideBar_sheet--openToDoCount {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
+  font-size: smaller;
+  background-color: #4b4340;
+}
+
+.toDosView {
+  background-image: url("./assets/background-image.jfif");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+  width: 85vw;
+}
+
+.toDosView section {
+  background: transparent;
+}
+
+.sheetName {
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  padding-left: 1rem;
+  color: white;
+  font-size: 26px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.openToDos,
+.doneToDos {
+  overflow: scroll;
+  scrollbar-color: transparent transparent;
+  overflow-x: hidden;
+  padding: 1rem;
+  margin-bottom: 1vh;
+}
+
+.openToDos {
+  height: 45vh;
+}
+
+.doneToDos {
+  height: 35vh;
+}
+
+.addToDos {
+  height: 6vh;
+  padding: 1rem;
+}
+
+.addTodo {
+  background-color: #4b4340;
+  width: 100%;
+  display: flex;
+  padding: 0.8rem 1.8rem 0.8rem 1.8rem;
+  border-radius: 6px;
+  color: white;
+}
+
+.addTodo i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1rem;
+}
+
+.todo {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 1rem 2rem 1rem 2rem;
+  margin-top: 0.3rem;
+  margin-bottom: 0.3rem;
+  border-radius: 8px;
+  color: white;
+  background-color: #2c2e2f;
+}
+
+.done_todo {
+  opacity: 0.9;
+  color: #acaeb1;
+  text-decoration: line-through;
+  text-decoration-color: #acaeb1;
+}
+
+.todo div {
+  margin-right: 0.5rem;
 }
